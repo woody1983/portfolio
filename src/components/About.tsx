@@ -31,13 +31,46 @@ export default function About() {
             </div>
           </div>
 
-          {/* Image Placeholder */}
-          <div className="aspect-square bg-[var(--color-noir-muted)]/10 border border-[var(--color-noir-muted)]/30 flex items-center justify-center mb-4">
-            <div className="text-center">
-              <div className="text-[var(--color-noir-muted)] text-4xl mb-2">[IMG_NOT_FOUND]</div>
-              <div className="text-[var(--color-noir-muted)] text-xs">CLASS: SR_ANALYST</div>
-            </div>
-          </div>
+          {/* Avatar Image */}
+          <motion.div 
+            className="aspect-square border border-[var(--color-noir-muted)]/30 mb-4 overflow-hidden relative group cursor-pointer"
+            whileHover={{ scale: 1.02 }}
+            transition={{ duration: 0.3 }}
+          >
+            {/* Default image (ava2.png) - shown when not hovering */}
+            <img 
+              src="/img/ava2.png" 
+              alt="Profile" 
+              className="w-full h-full object-cover absolute inset-0 z-10 opacity-100 group-hover:opacity-0 transition-opacity duration-500"
+            />
+            {/* Hover image (ava.jpg) - shown when hovering */}
+            <img 
+              src="/img/ava.jpg" 
+              alt="Profile" 
+              className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 relative z-0"
+            />
+            {/* Hover breathing effect - only visible on hover */}
+            <motion.div
+              className="absolute inset-0 border-2 border-[var(--color-noir-green)] pointer-events-none opacity-0 group-hover:opacity-100"
+              animate={{
+                boxShadow: [
+                  "0 0 10px rgba(0,255,65,0.3), inset 0 0 20px rgba(0,255,65,0.1)",
+                  "0 0 30px rgba(0,255,65,0.6), inset 0 0 40px rgba(0,255,65,0.2)",
+                  "0 0 10px rgba(0,255,65,0.3), inset 0 0 20px rgba(0,255,65,0.1)",
+                ],
+              }}
+              transition={{
+                duration: 1.5,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+            />
+            {/* Corner accents - only visible on hover */}
+            <div className="absolute top-0 left-0 w-4 h-4 border-t-2 border-l-2 border-[var(--color-noir-green)] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            <div className="absolute top-0 right-0 w-4 h-4 border-t-2 border-r-2 border-[var(--color-noir-green)] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            <div className="absolute bottom-0 left-0 w-4 h-4 border-b-2 border-l-2 border-[var(--color-noir-green)] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            <div className="absolute bottom-0 right-0 w-4 h-4 border-b-2 border-r-2 border-[var(--color-noir-green)] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+          </motion.div>
 
           {/* Status Info */}
           <div className="space-y-2 text-sm">
