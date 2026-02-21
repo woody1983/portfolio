@@ -64,6 +64,12 @@ export default function SystemNav() {
             >
               [CASES]
             </button>
+            <button 
+              onClick={() => scrollToSection('lib')}
+              className="text-[var(--color-noir-text)] hover:text-[var(--color-noir-green)] transition-colors duration-200"
+            >
+              [LIB]
+            </button>
           </div>
         </div>
       </div>
