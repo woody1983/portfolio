@@ -11,6 +11,7 @@ import Methodology from './components/Methodology';
 import CaseStudy from './components/CaseStudy';
 import Impact from './components/Impact';
 import Epilogue from './components/Epilogue';
+import Lib from './components/Lib';
 
 export default function App() {
   return (
@@ -27,6 +28,7 @@ export default function App() {
       <CaseStudy />
       <Impact />
       <Epilogue />
+      <Lib />
     </main>
   );
 }

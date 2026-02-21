@@ -37,17 +37,11 @@ export default function About() {
             whileHover={{ scale: 1.02 }}
             transition={{ duration: 0.3 }}
           >
-            {/* Default image (ava2.png) - shown when not hovering */}
-            <img 
-              src="/img/ava2.png" 
-              alt="Profile" 
-              className="w-full h-full object-cover absolute inset-0 z-10 opacity-100 group-hover:opacity-0 transition-opacity duration-500"
-            />
-            {/* Hover image (ava.jpg) - shown when hovering */}
-            <img 
-              src="/img/ava.jpg" 
-              alt="Profile" 
-              className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 relative z-0"
+            {/* Default image (ava.jpg) - shown when not hovering */}
+            <img
+              src="/img/ava.jpg"
+              alt="Profile"
+              className="w-full h-full object-cover transition-all duration-500 relative z-0"
             />
             {/* Hover breathing effect - only visible on hover */}
             <motion.div
