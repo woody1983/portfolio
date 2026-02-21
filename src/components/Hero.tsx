@@ -3,7 +3,7 @@ import { motion } from 'motion/react';
 export default function Hero() {
   return (
     <section className="h-screen flex flex-col justify-center items-center text-center px-4 relative">
-      <div className="max-w-4xl z-10">
+      <div className="max-w-4xl z-10 pt-12">
         <motion.h1 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
